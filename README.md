@@ -85,6 +85,11 @@ Make sure you have the following:
 
 For testing, the bot posts in the **`testingground4bots`** subreddit. You can find the line in the script where the subreddit is set:
 
-```python
 # Hardcoded for testing
 subreddit_name = 'testingground4bots'
+## Known Issues
+
+Bugs known in the current implementation of the bot:
+Groq AI Data Format:
+   The Groq AI API occasionally returns data in an unusual format (e.g., as a string or list) even though a dictionary format was requested. This could lead to code crashes when accessing expected dictionary keys.
+   
