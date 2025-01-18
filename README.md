@@ -42,14 +42,13 @@ Make sure you have the following:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/reddit-ai-bot.git
-    cd reddit-ai-bot
+    git clone https://github.com/coder-workbench/Reddit_Bot.git
     ```
 
 2. Install the required dependencies:
 
     ```bash
-    pip install -r requirements.txt
+   pip install praw groq schedule python-dotenv
     ```
 
 3. Set up your `.env` file for API credentials:
@@ -57,10 +56,11 @@ Make sure you have the following:
     Create a `.env` file in the root of the project with the following variables:
 
     ```plaintext
-    REDDIT_CLIENT_ID=your_reddit_client_id
-    REDDIT_CLIENT_SECRET=your_reddit_client_secret
-    REDDIT_USER_AGENT=your_reddit_user_agent
-    GROQ_API_KEY=your_groq_api_key
+   GROQ_API_KEY= [your secret key]
+   Reddit_API-KEY = [your reddit secret]
+    Client_ID = [reddit client id]
+    rdt_username = [reddit username]
+    rdt_password = [your password]
     ```
 
 ## Usage
@@ -68,13 +68,13 @@ Make sure you have the following:
 1. Run the bot script:
 
     ```bash
-    python bot.py
+    python Main.py
     ```
 
 2. The bot will prompt you for the following information:
 
-    - **Time to post**: Specify the time to post (e.g., `2025-01-18 10:00`).
-    - **Comment on posts**: Whether to comment on posts (`yes` or `no`).
+    - **Time to post**: Specify the time to post (e.g., 'HH:MM`).
+    - **Comment on posts**: Whether to comment on posts (`Y` or `N`).
     - **Subreddit for commenting** (if applicable): Specify a subreddit to comment on.
 
     For **testing purposes**, the bot will default to posting in the **`testingground4bots`** subreddit. This is a hardcoded value, so it’s recommended to use this subreddit for testing. If you want to **auto-generate** the subreddit name, you can uncomment the appropriate line in the script to allow the bot to auto-select a subreddit.
